@@ -140,6 +140,7 @@ class SecondScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(snapshot.data),
+                    SizedBox(height: 10,),
                     TextButton(
                       onPressed: () {
                         Navigator.pop(context);
@@ -187,6 +188,7 @@ class ThirdScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(snapshot.data),
+                    SizedBox(height: 10,),
                     TextButton(
                       onPressed: () {
                         Navigator.pop(context);
