@@ -124,11 +124,15 @@ class SecondScreen extends StatelessWidget {
               return Container();
             case ConnectionState.waiting:
               return const Center(
-                child: CircularProgressIndicator(),
+                child: CircularProgressIndicator(
+                  color: Colors.blueGrey,
+                ),
               );
             case ConnectionState.active:
               return const Center(
-                child: CircularProgressIndicator(),
+                child: CircularProgressIndicator(
+                  color: Colors.blueGrey,
+                ),
               );
             case ConnectionState.done:
               return Center(
@@ -167,11 +171,15 @@ class ThirdScreen extends StatelessWidget {
               return Container();
             case ConnectionState.waiting:
               return const Center(
-                child: CircularProgressIndicator(),
+                child: CircularProgressIndicator(
+                  color: Colors.blueGrey,
+                ),
               );
             case ConnectionState.active:
               return const Center(
-                child: CircularProgressIndicator(),
+                child: CircularProgressIndicator(
+                  color: Colors.blueGrey,
+                ),
               );
             case ConnectionState.done:
               return Center(
