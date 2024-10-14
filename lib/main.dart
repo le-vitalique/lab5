@@ -30,13 +30,28 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
         useMaterial3: true,
+        textButtonTheme: TextButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.blueGrey,
+            foregroundColor: Colors.white,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+          ),
+        ),
       ),
+
       //home: const MyHomePage(title: 'Flutter Demo Home Page'),
       home: const MainScreen(),
     );
   }
 }
 
+Future<String> futureString(String str) {
+  return Future.delayed(const Duration(seconds: 1), () {
+    return str;
+  });
+}
 
 String appBarTitle = '1 вариант';
 
@@ -50,7 +65,9 @@ class AppBarNav extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: Text(title),
       centerTitle: true,
-      backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      //backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      backgroundColor: Colors.blueGrey,
+      foregroundColor: Colors.white,
     );
   }
 
@@ -71,27 +88,15 @@ class MainScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           TextButton(
-            style: TextButton.styleFrom(
-              backgroundColor: Colors.blueGrey,
-              foregroundColor: Colors.white,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-            ),
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const SecondScreen()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const SecondScreen()));
             },
             child: const Text('На второй экран'),
           ),
           TextButton(
-            style: TextButton.styleFrom(
-              backgroundColor: Colors.blueGrey,
-              foregroundColor: Colors.white,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-            ),
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const ThirdScreen()));
@@ -117,13 +122,6 @@ class SecondScreen extends StatelessWidget {
           children: [
             const Text('Это второй экран'),
             TextButton(
-              style: TextButton.styleFrom(
-                backgroundColor: Colors.blueGrey,
-                foregroundColor: Colors.white,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-              ),
               onPressed: () {
                 Navigator.pop(context);
               },
@@ -149,13 +147,6 @@ class ThirdScreen extends StatelessWidget {
           children: [
             const Text('Это третий экран'),
             TextButton(
-              style: TextButton.styleFrom(
-                backgroundColor: Colors.blueGrey,
-                foregroundColor: Colors.white,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-              ),
               onPressed: () {
                 Navigator.pop(context);
               },
