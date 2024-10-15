@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
         useMaterial3: true,
         textButtonTheme: TextButtonThemeData(
-          style: ElevatedButton.styleFrom(
+          style: TextButton.styleFrom(
             backgroundColor: Colors.blueGrey,
             foregroundColor: Colors.white,
             shape: RoundedRectangleBorder(
